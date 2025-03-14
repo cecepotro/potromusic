@@ -58,15 +58,15 @@ public class Album {
     /**
      * @return the canción
      */
-    public List<Canción> getCanción() {
-        return canción;
+    public List<Canción> getCanciones() {
+        return canciones;
     }
 
     /**
      * @param canción the canción to set
      */
-    public void setCanción(List<Canción> canción) {
-        this.canción = canción;
+    public void setCanciones(List<Canción> canciones) {
+        this.canciones = canciones;
     }
 
     /**
@@ -86,6 +86,6 @@ public class Album {
     private String nombre;
     private Artista artista;
     private int lanzamiento;
-    private List<Canción> canción;
+    private List<Canción> canciones;
     private Género género;
 }
