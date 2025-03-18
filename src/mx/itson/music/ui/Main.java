@@ -6,6 +6,7 @@ package mx.itson.music.ui;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import mx.itson.music.entidades.Album;
 import mx.itson.music.entidades.Artista;
 import mx.itson.music.entidades.Canción;
@@ -20,8 +21,16 @@ public class Main {
     public static void main(String[] args) {
         
         Artista artista = new Artista();
-        artista.setNombre("Bad Bunny");
-        artista.setSitioWeb("www.badbunny,com");
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Escribe el nombre del álbum: ");
+        String nombreAlbum = scanner.nextLine();
+        artista.setNombre(nombreAlbum);
+        
+         System.out.println("Escribe el sitio web: ");
+        String sitioWeb = scanner.nextLine();
+        artista.setSitioWeb(sitioWeb);
          
          
          
@@ -48,6 +57,12 @@ public class Main {
        canciones.add(canción2);
        
        a.setCanciones(canciones);
+       
+       for(Canción c : a.getCanciones()){
+           System.out.println(c.getOrden());
+           System.out.println(c.getNombre());
+           System.out.println(c.getDuración());
+       }
   
     }
 }
